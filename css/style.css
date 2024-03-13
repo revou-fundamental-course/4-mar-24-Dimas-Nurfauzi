@@ -65,7 +65,7 @@ select {
     border-radius: 5px;
     box-sizing: border-box;
 }
-
+/*Tombol*/
 button {
     padding: 10px 20px;
     background-color: #3cba92; 
@@ -75,7 +75,7 @@ button {
     cursor: pointer;
     transition: background-color 0.3s;
 }
-
+/*Hover button*/
 button:hover {
     background-color: #1d8463;
 }
@@ -222,5 +222,55 @@ input:checked + .slider:before {
 .moon {
     right: -10px;
 }
+/* adjust layout buat layar kecil */
+@media screen and (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr; /
+        gap: 10px; 
+    }
+    .calculator,
+    .result {
+        padding: 15px; 
+    }
+    .result-header {
+        font-size: 70%; 
+    }
+    .toggle-container {
+        top: 10px; 
+        right: 10px;
+    }
+    .moon, .sun {
+        font-size: 20px; 
+    }
+}
 
+/* adjust font size buat layar yang kecil */
+@media screen and (max-width: 480px) {
+    header h1 {
+        font-size: 24px;
+    }
+    .calculator header h1 {
+        font-size: 20px;
+    }
+    .result-header h1 {
+        font-size: 18px;
+    }
+}
 
+/* adjust layout buat landscape mode */
+@media screen and (orientation: landscape) {
+    .container {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 15px;
+        padding: 15px;
+    }
+}
+
+/* Adjust layout buat potrait mode */
+@media screen and (orientation: portrait) {
+    .container {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        padding: 10px;
+    }
+}
