@@ -226,7 +226,7 @@ input:checked + .slider:before {
 @media screen and (max-width: 768px) {
   .container {
     grid-template-columns: 1fr;
-    /gap: 10px;
+    gap: 10px;
   }
   .calculator,
   .result {
